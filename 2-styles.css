@@ -13,10 +13,12 @@ label {
     border-radius: 35px;
     background-color: #ebebeb;
     position: relative;
+    transition: background-color .7s ease-out;
 }
 
 input:checked + label {
     background-color: #e2463d;
+    transition: background-color .7s ease-out;
 }
 
 label .toggle-inner {
@@ -50,10 +52,11 @@ input:checked + label .toggle-inner::after {
     top: -2px;
     left: 0px;
     background-color: #fff;
+    transition: left .4s ease-in-out;
 }
 
 input:checked + label > .toggle-switch {
     top: -2px;
     left: 60%;
+    transition: left .4s ease-in-out;
 }
-
