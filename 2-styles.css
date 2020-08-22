@@ -19,6 +19,28 @@ input:checked + label {
     background-color: #e2463d;
 }
 
+label .toggle-inner {
+    position: absolute;
+    top: 4px;
+    left: 47.5%;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.toggle-inner::after {
+    content: "No";
+    color: #c3c3c3;
+}
+
+input:checked + label .toggle-inner {
+    left: 14%;
+}
+
+input:checked + label .toggle-inner::after {
+    content: "Yes";
+    color: white;
+}
+
 .toggle-switch {
     position: absolute;
     height: 96%;
