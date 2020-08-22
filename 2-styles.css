@@ -1,0 +1,36 @@
+body {
+    font-size: 62.5%;
+}
+
+input {
+    display: none;
+}
+
+label {
+    display: block;
+    height: 35px;
+    width: 90px;
+    border-radius: 35px;
+    background-color: #ebebeb;
+    position: relative;
+}
+
+input:checked + label {
+    background-color: #e2463d;
+}
+
+.toggle-switch {
+    position: absolute;
+    height: 96%;
+    width: 34px;
+    border-radius: 50%;
+    border: 2px solid #c3c3c3;
+    top: -2px;
+    left: 0px;
+    background-color: #fff;
+}
+
+input:checked + label > .toggle-switch {
+    top: -2px;
+    left: 60%;
+}
