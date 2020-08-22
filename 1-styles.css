@@ -1,0 +1,19 @@
+a {
+    display: inline-block;
+    color: #a4343f;
+    text-decoration: none;
+}
+
+a:after {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 0px;
+    background: #a4343f;
+    transition: width .5s ease-out;
+}
+
+a:hover::after {
+    height: 2px;
+    width: 100%;
+}
