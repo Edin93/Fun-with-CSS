@@ -90,6 +90,41 @@ input:checked ~ label span.menu-line-2::after {
     color: var(--red-color);
 }
 
+@keyframes slideDown {
+    from {
+        transform: translate3d(0, -100%, 0);
+        visibility: hidden;
+    }
+
+    to {
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes slideUp {
+    0% {
+        transform: translate3d(0, 0%, 0);
+        display: block;
+    }
+
+    50% {
+        transform: translate3d(0, -50%, 0);
+        display: block;
+    }
+
+    100% {
+        transform: translate3d(0, -100%, 0);
+        display: none !important;
+    }
+}
+
 input.menu-open:checked ~ .menu-item {
     display: block;
+    animation-name: slideDown;
+    animation-duration: .25s;
+}
+
+input.menu-open:not(:checked) ~ .menu-item {
+    animation-name: slideUp;
+    animation-duration: 2s;
 }
