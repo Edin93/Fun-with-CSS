@@ -1,0 +1,95 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 62.5%;
+}
+
+:root {
+    --red-color: #ca3e38;
+    --nav-btn-width: 8rem;
+    --nav-btn-padding: 2.6rem 1rem;
+}
+
+nav {
+    margin: 75px;
+}
+
+input {
+    display: none;
+}
+
+label {
+    cursor: pointer;
+    display: block;
+    padding: var(--nav-btn-padding);
+    background-color: var(--red-color);
+    border-radius: 50%;
+    height: 128px;
+    width: 128px;
+}
+
+label:hover {
+    transform: scale(1.2);
+}
+
+span.menu-line {
+    display: block;
+    height: 4px;
+    width: 55%;
+    background-color: #fff;
+    margin: 8px auto;
+}
+
+input:checked ~ label span.menu-line-1 {
+    display: none;
+}
+
+input:checked ~ label span.menu-line-3 {
+    display: none;
+}
+
+input:checked ~ label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input:checked ~ label span.menu-line-2 {
+    transform: rotate(45deg);
+}
+
+input:checked ~ label span.menu-line-2::after {
+    display: block;
+    content: "";
+    height: 4px;
+    background-color: #fff;
+    transform: rotate(90deg);
+}
+
+.menu-item {
+    display: none;
+    cursor: pointer;
+    padding: var(--nav-btn-padding);
+    background-color: var(--red-color);
+    border-radius: 50%;
+    width: var(--nav-btn-width);
+    margin-top: 15px;
+    text-align: center;
+    color: #fff;
+    border: 2px solid var(--red-color);
+}
+
+.menu-item i {
+    font-size: 2.5rem;
+}
+
+.menu-item:hover {
+    background-color: #fff;
+    color: var(--red-color);
+}
+
+input.menu-open:checked ~ .menu-item {
+    display: block;
+}
