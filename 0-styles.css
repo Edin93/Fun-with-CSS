@@ -31,13 +31,19 @@ span {
 }
 
 li:first-child span {
-    background-image: url('images/html.png');
+    background-image: url('images/0-sprite.png');
+    background-position: left;
+    background-size: cover;
 }
 
 li:nth-child(2) span {
-    background-image: url('images/css.png');
+    background-image: url('images/0-sprite.png');
+    background-position: center;
+    background-size: cover;
 }
 
 li:nth-child(3) span {
-    background-image: url('images/js.png');
+    background-image: url('images/0-sprite.png');
+    background-position: right;
+    background-size: cover;
 }

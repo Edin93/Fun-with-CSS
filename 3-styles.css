@@ -30,8 +30,9 @@ label {
     width: 128px;
 }
 
-label:hover {
-    transform: scale(1.2);
+label:active {
+    transform: scale(1.75);
+    transition: transform .25s ease-in;
 }
 
 span.menu-line {
@@ -102,19 +103,12 @@ input:checked ~ label span.menu-line-2::after {
 }
 
 @keyframes slideUp {
-    0% {
+    from {
         transform: translate3d(0, 0%, 0);
-        display: block;
     }
 
-    50% {
-        transform: translate3d(0, -50%, 0);
-        display: block;
-    }
-
-    100% {
+    to {
         transform: translate3d(0, -100%, 0);
-        display: none !important;
     }
 }
 
