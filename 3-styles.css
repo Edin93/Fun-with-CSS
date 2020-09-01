@@ -70,7 +70,7 @@ input:checked ~ label span.menu-line-2::after {
 }
 
 .menu-item {
-    display: none;
+    display: block;
     cursor: pointer;
     padding: var(--nav-btn-padding);
     background-color: var(--red-color);
@@ -115,10 +115,13 @@ input:checked ~ label span.menu-line-2::after {
 input.menu-open:checked ~ .menu-item {
     display: block;
     animation-name: slideDown;
-    animation-duration: .25s;
+    animation-duration: .35s;
 }
 
 input.menu-open:not(:checked) ~ .menu-item {
+    opacity: 0;
+    visibility: hidden;
     animation-name: slideUp;
-    animation-duration: 2s;
+    animation-duration: .35s;
+    transition: opacity .15s ease-in-out .35s, visibility .15s ease-in-out .35s;
 }
