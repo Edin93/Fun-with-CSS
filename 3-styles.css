@@ -31,8 +31,8 @@ label {
 }
 
 label:active {
-    transform: scale(1.75);
-    transition: transform .25s ease-in;
+    transform: scale(1.5);
+    transition: transform .4s ease-in -.2s;
 }
 
 span.menu-line {
